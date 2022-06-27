@@ -1,19 +1,10 @@
-
 for(var i=0 ; i<=7; i++){
     
 document.querySelectorAll(".drum")[i].addEventListener("click",function(){
-
     // var buttonMouse = this.getAttribute("class");
     var buttonMouse = this.innerHTML;
-    
-    
     makeSound(buttonMouse);
-
     theAnimation(buttonMouse);
-
- 
-
-
 });
 
 document.querySelectorAll(".drum")[i].addEventListener("keypress",(event) => {
@@ -22,7 +13,6 @@ document.querySelectorAll(".drum")[i].addEventListener("keypress",(event) => {
 });
 
 }
-
 
 function makeSound(key){
 
@@ -62,8 +52,6 @@ function makeSound(key){
             kick.play();
             break;
 
-         
-    
         default: 
             
     }
@@ -73,7 +61,6 @@ function theAnimation(animateKey){
 
     var selectDocClass = document.querySelector("."+ animateKey);
     selectDocClass.classList.add("pressed");
-
 
     setTimeout(function(){
         selectDocClass.classList.remove("pressed");
